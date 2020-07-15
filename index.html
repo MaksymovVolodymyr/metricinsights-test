@@ -1,56 +1,46 @@
-<script type="text/javascript">
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="np-body">
+        <div id="particles-js"></div>
 
-    document.title = "How-to Guide";
+        <div class="np-container">
+            <div class="np-header">
+                <a href="#" class="np-logo">
+                    <img src="logo.svg" alt="Nike" class="np-logo__img">
+                    <span class="np-logo__text">
+                        ENTERPRISE ANALYTICS PORTAL
+                    </span>
+                </a>
+            </div>
 
-    function includeAssetFile(path) {
-        if (typeof (path) == undefined)
-            return false;
+            <div class="np-main-text">
+                This Portal is your single point of access for data visualizations, analytics, and insights. This platform promotes<strong>
+                Discoverability and Accessibility</strong> of information empowering <strong>data-driven business decisions</strong>.
+            </div>
 
-        var fileDomEl;
-        var pathArray = path.split('.');
-        var fileType = pathArray[pathArray.length - 1];
-
-        switch (fileType) {
-            case 'css':
-                fileDomEl = document.createElement("link");
-                fileDomEl.setAttribute("rel", "stylesheet");
-                fileDomEl.setAttribute("type", "text/css");
-                fileDomEl.setAttribute("href", path);
-                document.getElementsByTagName("head")[0].appendChild(fileDomEl);
-                break;
-            case 'js':
-                fileDomEl = document.createElement('script');
-                fileDomEl.setAttribute("type", "text/javascript");
-                fileDomEl.setAttribute("src", path);
-                document.getElementsByTagName("head")[0].appendChild(fileDomEl);
-                break;
-            default:
-                console.log("Unknown type: Can't include file " + path)
-                break;
-        }
-    }
-
-    includeAssetFile('/css/libs/custom/howto.css');
-    includeAssetFile('/js/libs/custom/how-to.js');
-</script>
-
-<main class="mod_how-to-page--use-portal-theme">
-    <section class="pagesContent">
-        <div class="menu-block fade-out-bottom slide-variant expanded">
-            <span class="close-menu menu-button"></span>
-            <h2>What do you want to do today?</h2>
+            <div class="np-controls">
+                <a href="#" class="np-btn">
+                    Request a Demo
+                </a>
+                <a href="#" target="_blank" class="np-btn">
+                    Review Training Guides
+                </a>
+                <a href="#" class="np-btn">
+                    Launch Portal Now!
+                </a>
+            </div>
         </div>
-
-        <div class="how-to-page" id="ht_page_does_not_exist"><span class="empty-content">Page with alias <span class="dAliasWrongPage"></span> doesn't exist<br>Choose a subject from the menu</span></div>
-
-        <div class="how-to-page active" id="how_to_glossary">
-            <section class="map-wrap fade-out-bottom">
-                <div class="glossary-header">
-                    <h2>Glossary</h2>
-                </div>
-            </section>
-        </div>
-
-        <!-- Pages content HERE-->
-    </section>
-</main>
+    </div>
+</body>
+<script src="particles.js"></script>
+<script src="main.js"></script>
+</html>
